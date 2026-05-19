@@ -1,0 +1,172 @@
+/**
+make selected squares small to undercut bevelk
+*/
+
+/* Remove default colors */
+:root {
+    --cg-board-light: transparent !important;
+    --cg-board-dark: transparent !important;
+    --selection-colour: rgba(94, 200, 41, .44);
+}
+
+/* Apply custom board texture */
+.my-ext-enabled .is2d cg-board::before {
+    background-image: url(https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/beveledboard.png) !important;
+    outline: 0.6vw outset #a08e66 !important;
+    border-radius: 0px !important;
+}
+
+
+/*  =========================
+    Coordinate Fix
+    ========================= */
+
+.my-ext-enabled coords .coord-light {
+    color: #625850 !important;
+
+}
+
+.my-ext-enabled coords .coord-dark {
+    color: #B7B0AB !important;
+
+}
+
+.my-ext-enabled .ranks {
+    transform: translate(-.5rem, 0%) !important;
+}
+
+.my-ext-enabled .files {
+    transform: translate(0%, -.5rem) !important;
+}
+
+/* =========================
+    CUSTOM PIECES
+========================= */
+
+
+.my-ext-enabled piece {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.my-ext-enabled piece.dragging {
+    cursor: grabbing !important;
+}
+
+.my-ext-enabled .is2d .queen.black {
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/bq.svg") !important;
+}
+
+.my-ext-enabled .is2d .queen.white {
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/wq.svg") !important;
+}
+
+.my-ext-enabled .is2d .king.black.mated {
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/bq.svg") !important;
+}
+
+.my-ext-enabled .is2d .king.white.mated {
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/wq.svg") !important;
+}
+
+/*
+/* WHITE PIECES *
+.is2d .king.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/wk.svg") !important; }
+.is2d .queen.white   { background-image: url("https://your-site.com/wq.png") !important; }
+.is2d .rook.white    { background-image: url("https://your-site.com/wr.png") !important; }
+.is2d .bishop.white  { background-image: url("https://your-site.com/wb.png") !important; }
+.is2d .knight.white  { background-image: url("https://your-site.com/wn.png") !important; }
+.is2d .pawn.white    { background-image: url("https://your-site.com/wp.png") !important; }
+
+/* BLACK PIECES *
+.is2d .king.black   { background-image: url("https://your-site.com/bk.png") !important; }
+.is2d .queen.black  { background-image: url("https://your-site.com/bq.png") !important; }
+.is2d .rook.black   { background-image: url("https://your-site.com/br.png") !important; }
+.is2d .bishop.black { background-image: url("https://your-site.com/bb.png") !important; }
+.is2d .knight.black { background-image: url("https://your-site.com/bn.png") !important; }
+.is2d .pawn.black   { background-image: url("https://your-site.com/bp.png") !important; }
+*/
+
+
+/* =========================
+    CUSTOM CIRCLES (RIGHT CLICK)
+========================= */
+
+.my-ext-enabled .cg-shapes g circle {
+    fill: #ff00005c !important;
+    stroke: red !important;
+    stroke-width: 0.07px !important;
+}
+
+.my-ext-enabled g line {
+    opacity: 1 !important;
+}
+
+
+/* =========================
+    Square Highlight Colours
+========================= */
+.my-ext-enabled :not(#promotion-choice)>square {
+    --margin-sq: 11%;
+    transition: background-color 0.2s ease 0s !important;
+
+    top: .75% !important;
+    left: .75% !important;
+
+    height: var(--margin-sq) !important;
+    width: var(--margin-sq) !important;
+
+    border-radius: 1%;
+}
+
+.my-ext-enabled #promotion-choice square {
+    transform: scale(0.92) !important;
+}
+
+.my-ext-enabled square.last-move {
+    background-color: rgba(255, 191, 0, 0.25) !important;
+    outline: .2rem solid rgba(255, 191, 0, .65) !important
+}
+
+.my-ext-enabled square.current-premove {
+    background-color: rgba(46, 30, 117, .25) !important;
+    outline: .2rem solid rgba(46, 30, 117, .65) !important
+}
+
+.my-ext-enabled square.selected {
+    background-color: var(--selection-colour) !important;
+    opacity: 0.7 !important;
+}
+
+.my-ext-enabled square.move-dest {
+    background: radial-gradient(var(--selection-colour) 19%, rgba(41, 92, 17, .83) calc(19% + 1px), rgba(41, 92, 17, .83) 24%, rgba(0, 0, 0, 0) calc(24% + 1px)) !important;
+}
+
+.my-ext-enabled square.move-dest:hover {
+    background: none !important;
+    background-color: var(--selection-colour) !important;
+}
+
+.my-ext-enabled square.oc.move-dest {
+    background: radial-gradient(transparent 0%, transparent 79%, var(--selection-colour) calc(80% + 1px)) !important;
+}
+
+.my-ext-enabled square.oc.move-dest:hover {
+    background: none !important;
+    background-color: var(--selection-colour) !important;
+}
+
+.my-ext-enabled square.check {
+    background: none !important;
+    background-color: rgba(255, 46, 46, .3) !important;
+    outline: .2rem solid rgba(255, 46, 46, .65) !important
+
+}
+
+.my-ext-enabled .checkmate square.check {
+    background: none !important;
+    background-color: rgba(255, 13, 13, 0.48) !important;
+    outline: .2rem solid rgba(255, 21, 21, 0.904) !important
+
+}

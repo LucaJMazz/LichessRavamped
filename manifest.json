@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Lichess Style",
+    "version": "0.1.0",
+    "description": "Custom Styles for Lichess",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://lichess.org/*"
+            ],
+        "js": ["content.js"],
+        "css": ["content.css"],
+        "run_at": "document_idle"
+    }
+]
+}

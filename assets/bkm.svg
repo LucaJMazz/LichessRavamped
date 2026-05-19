@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="10mm" height="10mm" viewBox="0 0 10 10" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:export>
+      <bx:file format="svg" href="#object-0" units="mm"/>
+      <bx:file format="svg" href="#object-1" path="Untitled 2.svg" units="mm"/>
+    </bx:export>
+  </defs>
+  <g style="fill:#fff;fill-opacity:1">
+    <g style="fill:#fff;fill-opacity:1;stroke-width:.09651081;stroke-miterlimit:4;stroke-dasharray:none">
+      <path d="M6.542 294.178c1.078 0 1.125.858 1.125 1.495H2.069c0-.65.046-1.495 1.124-1.495z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.38604325;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="matrix(1.07361 0 0 1 -.233 -286.97)" id="object-1"/>
+      <path d="M 6.723 293.781 C 6.922 293.643 6.197 292.187 6.197 292.187 L 5.94 293.001 L 5.499 292.409 L 5.172 292.737 L 5.376 293.521 L 5.049 292.992 L 4.9 292.622 L 5.287 292.2 L 4.895 291.719 L 4.084 293.009 L 3.516 291.943 L 3.047 292.79 C 2.955 293.075 2.834 293.671 3.008 293.794 L 6.723 293.781 Z" style="fill:#000;fill-opacity:1;stroke:none;stroke-width:.36596447;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" transform="matrix(1.07361 0 0 1 -.233 -286.97)" id="object-0"/>
+    </g>
+  </g>
+</svg>

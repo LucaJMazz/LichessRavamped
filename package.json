@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@chrisoakman/chessboardjs": "^1.0.0",
+    "chess.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}

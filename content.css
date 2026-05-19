@@ -11,7 +11,7 @@ make selected squares small to undercut bevelk
 
 /* Apply custom board texture */
 .my-ext-enabled .is2d cg-board::before {
-    background-image: url(https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/beveledboard.png) !important;
+    background-image: url('https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/beveledboard.png') !important;
     outline: 0.6vw outset #a08e66 !important;
     border-radius: 0px !important;
 }
@@ -55,19 +55,19 @@ make selected squares small to undercut bevelk
 }
 
 .my-ext-enabled .is2d .queen.black {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/bq.svg") !important;
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/bq.svg") !important;
 }
 
 .my-ext-enabled .is2d .queen.white {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/wq.svg") !important;
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/wq.svg") !important;
 }
 
 .my-ext-enabled .is2d .king.black.mated {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/bq.svg") !important;
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/bkm.svg") !important;
 }
 
 .my-ext-enabled .is2d .king.white.mated {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/73df8f6e769eca7c7f16be1cbe24dfb019cc4fea/wq.svg") !important;
+    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/wkm.svg") !important;
 }
 
 /*

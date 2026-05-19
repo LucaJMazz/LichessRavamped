@@ -9,25 +9,25 @@ else {
     const movesObserver = new MutationObserver(onMoveMade);
     movesObserver.observe(moveData, {
         childList: true,     
-        subtree: true        
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["class"]        
     });
-
-    const lastMove = moveData.getElementsByClassName("a1t")[0];
-    console.log('Last Move', lastMove.innerText);
     testStatus();
 }
 function onMoveMade(mutationList) {
-    for (const mutation of mutationList) {
-        if (mutation.type === 'childList') {
-            const lastMove = moveData.getElementsByClassName("a1t")[0];
-            console.log('Last Move', lastMove.innerText);
-            testStatus();
-        }
-    }
+    testStatus();
 };
 
 function testStatus() {
-    if (moveData.getElementsByClassName("result-wrap")[0]) {
+    const size = moveData.childElementCount;
+
+    const currentMove = moveData.getElementsByClassName("a1t")[0];
+    console.log('Current Move', currentMove.innerText);
+
+    const result = moveData.getElementsByClassName("result-wrap")[0];
+
+    if (currentMove == moveData.children[size-2] && result) {
         boardStatus = moveData.getElementsByClassName("result-wrap")[0].getElementsByClassName('status')[0].innerText;
         console.log(boardStatus);
         boardStatus = boardStatus.split(' ');
@@ -37,6 +37,11 @@ function testStatus() {
         } else if (boardStatus[boardStatus.length-3] === 'Black') {
             loser("White")
         }
+    } else {
+        let king = document.getElementsByClassName('white king')[0];
+        king.classList.remove('mated');
+        king = document.getElementsByClassName('black king')[0];
+        king.classList.remove('mated');
     }
 }
 

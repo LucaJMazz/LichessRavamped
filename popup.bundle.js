@@ -3505,7 +3505,7 @@
   }
   function reloadFen() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.tabs.sendMessage(tabs[0].id, { action: "getMoveList" }, (response) => {
+      chrome.tabs.sendMessage(tabs[0].id, { action: "getMoves" }, (response) => {
         console.log(response);
         let FEN = movesToFen(response);
         board.position(FEN);

@@ -1,6 +1,12 @@
-/**
-make selected squares small to undercut bevelk
-*/
+body::after {
+    content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        background:
+            url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/bkm.svg"),
+            url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/wkm.svg");
+    }
 
 /* Remove default colors */
 :root {
@@ -54,39 +60,22 @@ make selected squares small to undercut bevelk
     cursor: grabbing !important;
 }
 
-.my-ext-enabled .is2d .queen.black {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/bq.svg") !important;
-}
+.my-ext-enabled .is2d .king.black.mated {background-image: url("") !important;}
+.my-ext-enabled .is2d .king.white.mated {background-image: url("") !important;}
 
-.my-ext-enabled .is2d .queen.white {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/wq.svg") !important;
-}
+.my-ext-enabled .is2d .king.white    { background-image: url("") !important; }
+.my-ext-enabled .is2d .queen.white   { background-image: url("") !important; }
+.my-ext-enabled .is2d .rook.white    { background-image: url("") !important; }
+.my-ext-enabled .is2d .bishop.white  { background-image: url("") !important; }
+.my-ext-enabled .is2d .knight.white  { background-image: url("") !important; }
+.my-ext-enabled .is2d .pawn.white    { background-image: url("") !important; }
 
-.my-ext-enabled .is2d .king.black.mated {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/bkm.svg") !important;
-}
-
-.my-ext-enabled .is2d .king.white.mated {
-    background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/wkm.svg") !important;
-}
-
-/*
-/* WHITE PIECES *
-.is2d .king.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/wk.svg") !important; }
-.is2d .queen.white   { background-image: url("https://your-site.com/wq.png") !important; }
-.is2d .rook.white    { background-image: url("https://your-site.com/wr.png") !important; }
-.is2d .bishop.white  { background-image: url("https://your-site.com/wb.png") !important; }
-.is2d .knight.white  { background-image: url("https://your-site.com/wn.png") !important; }
-.is2d .pawn.white    { background-image: url("https://your-site.com/wp.png") !important; }
-
-/* BLACK PIECES *
-.is2d .king.black   { background-image: url("https://your-site.com/bk.png") !important; }
-.is2d .queen.black  { background-image: url("https://your-site.com/bq.png") !important; }
-.is2d .rook.black   { background-image: url("https://your-site.com/br.png") !important; }
-.is2d .bishop.black { background-image: url("https://your-site.com/bb.png") !important; }
-.is2d .knight.black { background-image: url("https://your-site.com/bn.png") !important; }
-.is2d .pawn.black   { background-image: url("https://your-site.com/bp.png") !important; }
-*/
+.my-ext-enabled .is2d .king.black   { background-image: url("") !important; }
+.my-ext-enabled .is2d .queen.black  { background-image: url("") !important; }
+.my-ext-enabled .is2d .rook.black   { background-image: url("") !important; }
+.my-ext-enabled .is2d .bishop.black { background-image: url("") !important; }
+.my-ext-enabled .is2d .knight.black { background-image: url("") !important; }
+.my-ext-enabled .is2d .pawn.black   { background-image: url("") !important; }
 
 
 /* =========================
@@ -164,9 +153,16 @@ make selected squares small to undercut bevelk
 
 }
 
-.my-ext-enabled .checkmate square.check {
-    background: none !important;
-    background-color: rgba(255, 13, 13, 0.48) !important;
-    outline: .2rem solid rgba(255, 21, 21, 0.904) !important
 
+/*=======================
+    Piece edits
+=========================*/
+.my-ext-enabled piece:not(.dragging) {
+    transition: all cubic-bezier(.5,-0.1,0.3,1.2) 0.1s !important;
+}
+
+.my-ext-enabled square:hover+piece,
+square:hover piece {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }

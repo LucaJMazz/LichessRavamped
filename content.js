@@ -60,6 +60,8 @@ function getMoves() {
             movelist.push(moveData.children[i].innerText);
         }
     }
+    console.log(moveData);
+    console.log(movelist);
     return movelist;
 }
 

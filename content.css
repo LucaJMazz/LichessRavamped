@@ -63,19 +63,19 @@ body::after {
 .my-ext-enabled .is2d .king.black.mated {background-image: url("") !important;}
 .my-ext-enabled .is2d .king.white.mated {background-image: url("") !important;}
 
-.my-ext-enabled .is2d .king.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/wk.png") !important; }
-.my-ext-enabled .is2d .queen.white   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/wq.png") !important; }
-.my-ext-enabled .is2d .rook.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/wr.png") !important; }
-.my-ext-enabled .is2d .bishop.white  { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/wb.png") !important; }
-.my-ext-enabled .is2d .knight.white  { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/wn.png") !important; }
-.my-ext-enabled .is2d .pawn.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/wp.png") !important; }
+.my-ext-enabled .is2d .king.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wk.png") !important; }
+.my-ext-enabled .is2d .queen.white   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wq.png") !important; }
+.my-ext-enabled .is2d .rook.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wr.png") !important; }
+.my-ext-enabled .is2d .bishop.white  { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wb.png") !important; }
+.my-ext-enabled .is2d .knight.white  { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wn.png") !important; }
+.my-ext-enabled .is2d .pawn.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wp.png") !important; }
 
-.my-ext-enabled .is2d .king.black   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/bk.png") !important; }
-.my-ext-enabled .is2d .queen.black  { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/bq.png") !important; }
-.my-ext-enabled .is2d .rook.black   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/br.png") !important; }
-.my-ext-enabled .is2d .bishop.black { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/bb.png") !important; }
-.my-ext-enabled .is2d .knight.black { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/bn.png") !important; }
-.my-ext-enabled .is2d .pawn.black   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/bb60e5cf477b70ab5b8550a061f7f7c43fe21817/assets/CustomPieces/bp.png") !important; }
+.my-ext-enabled .is2d .king.black   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bk.png") !important; }
+.my-ext-enabled .is2d .queen.black  { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bq.png") !important; }
+.my-ext-enabled .is2d .rook.black   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/br.png") !important; }
+.my-ext-enabled .is2d .bishop.black { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bb.png") !important; }
+.my-ext-enabled .is2d .knight.black { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bn.png") !important; }
+.my-ext-enabled .is2d .pawn.black   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bp.png") !important; }
 
 
 /* =========================

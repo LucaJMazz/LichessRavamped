@@ -60,8 +60,8 @@ body::after {
     cursor: grabbing !important;
 }
 
-.my-ext-enabled .is2d .king.black.mated {background-image: url("") !important;}
-.my-ext-enabled .is2d .king.white.mated {background-image: url("") !important;}
+.my-ext-enabled .is2d .king.black.mated {background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wkm.png") !important;}
+.my-ext-enabled .is2d .king.white.mated {background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bkm.png") !important;}
 
 .my-ext-enabled .is2d .king.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wk.png") !important; }
 .my-ext-enabled .is2d .queen.white   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wq.png") !important; }

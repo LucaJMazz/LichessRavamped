@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Lichess Style",
+    "name": "Lichess Ravamped",
     "version": "0.1.0",
-    "description": "Custom Styles for Lichess",
+    "description": "Custom Styles and Board vision for Lichess",
     "action": {
         "default_popup": "popup.html"
     },

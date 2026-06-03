@@ -3,7 +3,7 @@ var boardStatus = null;
 document.body.classList.add("my-ext-enabled");
 console.log("Script loaded");
 
-const moveData = document.getElementsByTagName('l4x')[0];
+let moveData = document.getElementsByTagName('l4x')[0];
 if (!moveData) console.log("movelist element not found")
 else {
     const movesObserver = new MutationObserver(testStatus); // observes moves, calls function
@@ -54,6 +54,8 @@ function loser(colour) {
  * @returns move list as an array
  */
 function getMoves() { 
+    moveData = document.getElementsByTagName('l4x')[0];
+    if (!moveData) return -1; // returns -1 if no movelist found
     let movelist = [];
     for (let i = 0; i<moveData.children.length; i++) {
         if ( i%3 != 0) {

@@ -3458,8 +3458,13 @@
 
   // popup.js
   var styleCheckbox = document.getElementById("styleCheckbox");
+  var boardDiv = document.getElementById("myBoard");
   var reloadButton = document.getElementById("reload");
   var flipButton = document.getElementById("flip");
+  var backButton = document.getElementById("back");
+  var forwardButton = document.getElementById("forward");
+  var movelist = null;
+  var currMoveIndex = 0;
   var config = {
     draggable: true,
     dropOffBoard: "trash",
@@ -3491,9 +3496,11 @@
     let text = style ? "On" : "Off";
     chrome.action.setBadgeText({ text });
   }
-  function movesToFen(movelist) {
+  function movesToFen(movelist2) {
+    const counterElement = document.getElementById("counter");
+    counterElement.textContent = currMoveIndex + 1;
     const chess = new Chess();
-    for (const move of movelist) {
+    for (const move of movelist2) {
       try {
         chess.move(move);
       } catch {
@@ -3506,11 +3513,57 @@
   function reloadFen() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, { action: "getMoves" }, (response) => {
-        console.log(response);
-        let FEN = movesToFen(response);
-        board.position(FEN);
+        if (!response) {
+          console.log("No response from content script");
+          boardDiv.classList.add("hidden");
+          return;
+        } else if (response == -1) {
+          console.log("No movelist found");
+          boardDiv.classList.add("hidden");
+          return;
+        }
+        try {
+          movelist = response;
+          currMoveIndex = movelist.length - 1;
+          let FEN = movesToFen(movelist);
+          boardDiv.classList.remove("hidden");
+          board.position(FEN);
+        } catch (err) {
+          boardDiv.classList.add("hidden");
+          console.log("FEN conversion failed:", err);
+        }
       });
     });
+  }
+  document.addEventListener("keydown", (event) => {
+    console.log(`Key pressed: ${event.key} | Code: ${event.code}`);
+    if (event.key == "ArrowRight") forward();
+    else if (event.key == "ArrowLeft") back();
+  });
+  backButton.addEventListener("click", back);
+  forwardButton.addEventListener("click", forward);
+  function back() {
+    if (movelist == null) return;
+    console.log(movelist);
+    currMoveIndex--;
+    if (currMoveIndex < -1) {
+      currMoveIndex = -1;
+      board.start();
+      return;
+    }
+    let subMovelist = movelist.slice(0, currMoveIndex + 1);
+    let FEN = movesToFen(subMovelist);
+    board.position(FEN);
+  }
+  function forward() {
+    if (movelist == null) return;
+    console.log(movelist);
+    let size = movelist.length - 1;
+    currMoveIndex++;
+    if (currMoveIndex > size) currMoveIndex = size;
+    let subMovelist = movelist.slice(0, currMoveIndex + 1);
+    let FEN = movesToFen(subMovelist);
+    board.position(FEN);
   }
   document.addEventListener("DOMContentLoaded", () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {

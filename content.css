@@ -4,8 +4,8 @@ body::after {
         width: 0;
         height: 0;
         background:
-            url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/bkm.svg"),
-            url("https://raw.githubusercontent.com/LucaJMazz/LichessStylusCss/refs/heads/main/assets/wkm.svg");
+            url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wkm.png"),
+            url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bkm.png");
     }
 
 /* Remove default colors */
@@ -43,7 +43,7 @@ body::after {
 
 .my-ext-enabled .files {
     transform: translate(0%, -.5rem) !important;
-}
+}   
 
 /* =========================
     CUSTOM PIECES
@@ -60,8 +60,8 @@ body::after {
     cursor: grabbing !important;
 }
 
-.my-ext-enabled .is2d .king.black.mated {background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wkm.png") !important;}
-.my-ext-enabled .is2d .king.white.mated {background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bkm.png") !important;}
+.my-ext-enabled .is2d .king.black.mated {background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/bkm.png") !important;}
+.my-ext-enabled .is2d .king.white.mated {background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wkm.png") !important;}
 
 .my-ext-enabled .is2d .king.white    { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wk.png") !important; }
 .my-ext-enabled .is2d .queen.white   { background-image: url("https://raw.githubusercontent.com/LucaJMazz/LichessRavamped/refs/heads/main/assets/CustomPieces/wq.png") !important; }

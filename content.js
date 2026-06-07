@@ -3,22 +3,28 @@ var boardStatus = null;
 document.body.classList.add("my-ext-enabled");
 console.log("Script loaded");
 
-let moveData = document.getElementsByTagName('l4x')[0];
-if (!moveData) console.log("movelist element not found")
-else {
-    const movesObserver = new MutationObserver(testStatus); // observes moves, calls function
-    movesObserver.observe(moveData, { // observse children, and attributes of children
-        childList: true,     
+let moveData = document.querySelector('l4x');
+function setupObserver() {
+    moveData = document.querySelector('l4x');
+    if (!moveData) {
+        setTimeout(setupObserver, 500);
+        return;
+    }
+    console.log("Move list found");
+    const movesObserver = new MutationObserver(testStatus);
+    movesObserver.observe(moveData, {
+        childList: true,
         subtree: true,
         attributes: true,
-        attributeFilter: ["class"]        
+        attributeFilter: ["class"]
     });
     testStatus();
 }
+setupObserver();
 
 function testStatus() { // called when mutation occurs in move list
+    console.log('tested');
     const size = moveData.childElementCount;
-
     const currentMove = moveData.getElementsByClassName("a1t")[0];
     console.log('Current Move', currentMove.innerText);
 

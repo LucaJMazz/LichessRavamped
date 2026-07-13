@@ -3,9 +3,9 @@ var boardStatus = null;
 document.body.classList.add("my-ext-enabled");
 console.log("Script loaded");
 
-let moveData = document.querySelector('l4x');
+let moveData = document.querySelector('i5d').querySelector('app');
 function setupObserver() {
-    moveData = document.querySelector('l4x');
+    moveData = document.querySelector('i5d').querySelector('app');
     if (!moveData) {
         setTimeout(setupObserver, 500);
         return;
@@ -60,7 +60,7 @@ function loser(colour) {
  * @returns move list as an array
  */
 function getMoves() { 
-    moveData = document.getElementsByTagName('l4x')[0];
+    moveData = document.getElementsByTagName('i5d')[0].querySelector('app');
     if (!moveData) return -1; // returns -1 if no movelist found
     let movelist = [];
     for (let i = 0; i<moveData.children.length; i++) {
